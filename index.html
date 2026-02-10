@@ -25,17 +25,17 @@
         }
 
         .container {
-            max-width: 550px;
+            max-width: 500px;
             width: 100%;
         }
 
         header {
             text-align: center;
-            padding: 30px 0;
+            padding: 20px 0;
         }
 
         .logo {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin: 0;
             background: linear-gradient(to right, #25d366, #8e44ad);
             -webkit-background-clip: text;
@@ -43,115 +43,72 @@
             font-weight: bold;
         }
 
-        .site-description {
-            background: linear-gradient(145deg, rgba(142, 68, 173, 0.1), rgba(37, 211, 102, 0.1));
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-            line-height: 1.6;
-        }
-
         .channel-list {
             display: grid;
-            gap: 20px; /* زيادة المسافة بين القنوات */
+            gap: 30px; /* مسافة بين القنوات */
+            margin-top: 20px;
         }
 
         .channel-card {
             background: var(--card-glass);
             border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 22px; /* زوايا أكثر نعومة */
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 25px;
+            padding: 20px;
+            text-align: center; /* توسيط المحتوى */
             text-decoration: none;
             color: white;
-            overflow: hidden;
+            transition: 0.3s ease;
+            display: block;
         }
 
         .channel-card:hover {
-            transform: scale(1.02);
-            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
             border-color: var(--accent-green);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
-        .info-part {
-            display: flex;
-            align-items: center;
-            gap: 20px; /* مسافة أكبر بين الصورة والنص */
-        }
-
-        /* تعديل الصور لتصبح أكبر وأوضح */
+        /* تعديل الصورة لتكون كبيرة وفي المنتصف */
         .channel-img {
-            width: 80px;  /* زيادة الحجم من 55 إلى 80 */
-            height: 80px; /* زيادة الحجم من 55 إلى 80 */
-            border-radius: 18px; /* زوايا متناسقة مع الكارت */
+            width: 120px; 
+            height: 120px;
+            border-radius: 20px;
             object-fit: cover;
-            border: 3px solid rgba(37, 211, 102, 0.3); /* إطار خفيف حول الصورة */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: 3px solid var(--accent-green);
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .channel-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 10px 0;
+            display: block;
+        }
+
+        /* زر اضغط للانضمام أسفل الصورة */
+        .join-btn {
+            display: inline-block;
+            background: var(--accent-green);
+            color: #000;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
             transition: 0.3s;
         }
 
-        .channel-card:hover .channel-img {
-            border-color: var(--accent-green);
-            transform: rotate(2deg);
-        }
-
-        .name-part h3 {
-            margin: 0;
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .name-part p {
-            margin: 5px 0 0;
-            font-size: 0.85rem;
-            color: #ccc;
-        }
-
-        .stats-part {
-            text-align: left;
-            font-size: 0.8rem;
-            color: var(--accent-green);
-            font-weight: bold;
-        }
-
-        .count-badge {
-            background: rgba(37, 211, 102, 0.2);
-            padding: 4px 10px;
-            border-radius: 12px;
-            margin-left: 5px;
+        .channel-card:hover .join-btn {
+            background: #fff;
+            transform: scale(1.1);
         }
 
         .footer {
             margin-top: 50px;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            width: 100%;
-        }
-
-        .chat-btn {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--accent-green);
-            text-decoration: none;
-            font-size: 0.95rem;
-            border: 2px solid var(--accent-green);
-            padding: 10px 25px;
-            border-radius: 30px;
-            transition: 0.3s;
-            font-weight: bold;
-        }
-
-        .chat-btn:hover {
-            background: var(--accent-green);
-            color: black;
-            box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
         }
     </style>
 </head>
@@ -162,86 +119,48 @@
             <h1 class="logo">الجوكر - Joker</h1>
         </header>
 
-        <div class="site-description">
-            <h2>🔥 أفضل قنوات واتساب لعام 2026</h2>
-            <p>
-                مرحباً بك في عالم الجوكر. اضغط على أي قناة أو صورة للانضمام فوراً واستلام أحدث المحتويات اليومية.
-            </p>
-        </div>
-
         <div class="channel-list">
+            
             <a href="https://whatsapp.com/channel/0029VaFDOVyGE56kJdojZ21y" class="channel-card">
-                <div class="info-part">
-                    <img src="555.jpg" alt="نكت وصور" class="channel-img">
-                    <div class="name-part">
-                        <h3>نكت وصور مضحكة</h3>
-                        <p>اضغط للمتابعة ⚡</p>
-                    </div>
-                </div>
-                <div class="stats-part">👁️ <span class="count-badge">1.2k</span></div>
+                <img src="555.jpg" alt="نكت وصور" class="channel-img">
+                <span class="channel-name">ملصقات مضحكة</span>
+                <div class="join-btn">اضغط للانضمام ⚡</div>
             </a>
 
             <a href="https://whatsapp.com/channel/0029VaetYGr2P59nEFQQDN2y" class="channel-card">
-                <div class="info-part">
-                    <img src="222.jpg" alt="نكت وملصقات" class="channel-img">
-                    <div class="name-part">
-                        <h3>نكت وملصقات مضحكة</h3>
-                        <p>عالم الضحك المتواصل 🎡</p>
-                    </div>
-                </div>
-                <div class="stats-part">👁️ <span class="count-badge">850</span></div>
+                <img src="222.jpg" alt="نكت وملصقات" class="channel-img">
+                <span class="channel-name">نكت وملصقات مضحكة</span>
+                <div class="join-btn">اضغط للانضمام 🎡</div>
             </a>
 
             <a href="https://whatsapp.com/channel/0029Vah9yu64SpkPw5bheK2w" class="channel-card">
-                <div class="info-part">
-                    <img src="333.jpg" alt="عالم الحزن" class="channel-img">
-                    <div class="name-part">
-                        <h3>عالم الحزن</h3>
-                        <p>كلمات من القلب 🖤</p>
-                    </div>
-                </div>
-                <div class="stats-part">👁️ <span class="count-badge">2.1k</span></div>
+                <img src="333.jpg" alt="عالم الحزن" class="channel-img">
+                <span class="channel-name">عالم الحزن</span>
+                <div class="join-btn">اضغط للانضمام 🖤</div>
             </a>
 
             <a href="https://whatsapp.com/channel/0029Vag9IXyFnSz36S2Q2L2r" class="channel-card">
-                <div class="info-part">
-                    <img src="444.jpg" alt="عالم الحب" class="channel-img">
-                    <div class="name-part">
-                        <h3>عالم الحب والعشق</h3>
-                        <p>رومانسيات راقية 🎀</p>
-                    </div>
-                </div>
-                <div class="stats-part">👁️ <span class="count-badge">1.5k</span></div>
+                <img src="444.jpg" alt="عالم الحب" class="channel-img">
+                <span class="channel-name">عالم الحب والعشق</span>
+                <div class="join-btn">اضغط للانضمام 🎀</div>
             </a>
 
             <a href="https://whatsapp.com/channel/0029VaM22Q1GZNCs342ZUL3q" class="channel-card">
-                <div class="info-part">
-                    <img src="111.png" alt="كبرياء وغرور" class="channel-img">
-                    <div class="name-part">
-                        <h3>كبرياء رجل وغرور أنثى</h3>
-                        <p>خواطر واقتباسات قوية 🔥</p>
-                    </div>
-                </div>
-                <div class="stats-part">👁️ <span class="count-badge">980</span></div>
+                <img src="111.png" alt="كبرياء وغرور" class="channel-img">
+                <span class="channel-name">كبرياء رجل وغرور أنثى</span>
+                <div class="join-btn">اضغط للانضمام 🔥</div>
             </a>
 
             <a href="https://whatsapp.com/channel/0029VajEuafBKfi6URrMh93y" class="channel-card">
-                <div class="info-part">
-                    <img src="666.jpg" alt="ملصقات منوعة" class="channel-img">
-                    <div class="name-part">
-                        <h3>ملصقات منوعة - Love</h3>
-                        <p>أجمل استيكرات الواتساب 🎧</p>
-                    </div>
-                </div>
-                <div class="stats-part">👁️ <span class="count-badge">3.4k</span></div>
+                <img src="666.jpg" alt="ملصقات منوعة" class="channel-img">
+                <span class="channel-name">ملصقات منوعة - Love</span>
+                <div class="join-btn">اضغط للانضمام 🎧</div>
             </a>
+
         </div>
 
         <div class="footer">
-            <p class="copyright">الحقوق خاصة بالجوكر © 2026</p>
-            <a href="https://wa.me/967781363029" class="chat-btn">
-                💬 تواصل مباشر مع الجوكر
-            </a>
+            <p>جميع الحقوق محفوظة للجوكر © 2026</p>
         </div>
     </div>
 
