@@ -1,5 +1,3 @@
-تم تحديث الكود بإضافة زر تواصل احترافي ومميز في أسفل الصفحة، يظهر بشكل ثابت وجذاب ليتمكن المستخدمون من مراسلتك على الواتساب بضغطة واحدة.
-إليك الكود المحدث:
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -48,7 +46,7 @@
         .channel-list {
             display: grid;
             gap: 35px;
-            margin-bottom: 100px; /* مسافة للزر الثابت */
+            margin-bottom: 120px;
         }
 
         .channel-card {
@@ -67,22 +65,25 @@
             transform: translateY(-10px);
             border-color: var(--accent-green);
             background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
         }
 
+        /* صورة عريضة وكبيرة */
         .channel-img {
-            width: 160px; 
-            height: 160px;
-            border-radius: 50%;
+            width: 90%; 
+            max-width: 280px;
+            height: 180px;
+            border-radius: 25px;
             object-fit: cover;
-            border: 4px solid var(--accent-green);
+            border: 3px solid var(--accent-green);
             margin-bottom: 20px;
-            box-shadow: 0 0 25px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
 
         .channel-name {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 800;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             display: block;
             color: var(--accent-green);
         }
@@ -92,18 +93,21 @@
             color: #bdc3c7;
             margin-bottom: 20px;
             display: block;
+            line-height: 1.6;
+            padding: 0 10px;
         }
 
         .join-btn {
             display: inline-block;
             background: linear-gradient(90deg, #25d366, #128c7e);
             color: #fff;
-            padding: 12px 35px;
+            padding: 12px 40px;
             border-radius: 50px;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
-        /* تصميم زر التواصل الجديد في الأسفل */
+        /* زر التواصل الثابت */
         .contact-section {
             position: fixed;
             bottom: 20px;
@@ -118,30 +122,30 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             background: #25d366;
             color: #000;
             text-decoration: none;
-            padding: 15px;
-            border-radius: 20px;
+            padding: 18px;
+            border-radius: 25px;
             font-weight: 800;
-            font-size: 1.1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: 0.3s;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
             border: 2px solid white;
+            transition: 0.3s;
         }
 
         .floating-contact-btn:hover {
-            transform: scale(1.05);
             background: #fff;
             color: #25d366;
+            transform: scale(1.05);
         }
 
         .footer-text {
             text-align: center;
-            margin-bottom: 120px;
+            margin-bottom: 140px;
             opacity: 0.5;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -150,26 +154,54 @@
     <div class="container">
         <header>
             <h1 class="logo">الجوكر - Joker</h1>
-            <p style="color: #888;">عالمك الخاص على واتساب</p>
+            <p style="color: #888;">أكبر تجمع قنوات على واتساب 2026</p>
         </header>
 
         <div class="channel-list">
             
-            <a href="https://whatsapp.com/channel/0029VaetYGr2P59nEFQQDN2y" class="channel-card">
-                <img src="222.jpg" alt="ملصقات مضحكة" class="channel-img">
-                <span class="channel-name">ملصقات الجوكر المضحكة</span>
-                <span class="channel-desc">أجمل الاستيكرات الحصرية والترند التي تجعل محادثاتك أكثر متعة! 🎭✨</span>
-                <div class="join-btn">إضغط للانضمام الآن ✅</div>
+            <a href="https://whatsapp.com/channel/0029VajEuafBKfi6URrMh93y" class="channel-card">
+                <img src="666.jpg" alt="ملصقات مضحكة" class="channel-img">
+                <span class="channel-name">ملصقات مضحكة</span>
+                <span class="channel-desc">عالم من الاستيكرات الحصرية والترند التي تجعل محادثاتك تنبض بالحياة والضحك! 🎭✨</span>
+                <div class="join-btn">إضغط للانضمام ⚡</div>
             </a>
 
             <a href="https://whatsapp.com/channel/0029VaFDOVyGE56kJdojZ21y" class="channel-card">
                 <img src="555.jpg" alt="نكت وصور" class="channel-img">
                 <span class="channel-name">نكت وصور مضحكة</span>
-                <span class="channel-desc">أقوى النكت اليومية والقفشات المصورة لتضحك من قلبك. 😂🔥</span>
-                <div class="join-btn">إضغط للانضمام الآن ✅</div>
+                <span class="channel-desc">جرعتك اليومية من السعادة مع أقوى النكت والقفشات المصورة التي ستجعلك تضحك من قلبك! 😂🔥</span>
+                <div class="join-btn">إضغط للانضمام 🎡</div>
             </a>
 
-            </div>
+            <a href="https://whatsapp.com/channel/0029Vah9yu64SpkPw5bheK2w" class="channel-card">
+                <img src="333.jpg" alt="عالم الحزن" class="channel-img">
+                <span class="channel-name">عالم الحزن</span>
+                <span class="channel-desc">خواطر تلمس القلب وكلمات تعبر عن المشاعر العميقة والهدوء النفسي. 🖤🍂</span>
+                <div class="join-btn">إضغط للانضمام 🥀</div>
+            </a>
+
+            <a href="https://whatsapp.com/channel/0029Vag9IXyFnSz36S2Q2L2r" class="channel-card">
+                <img src="444.jpg" alt="عالم الحب" class="channel-img">
+                <span class="channel-name">عالم الحب والعشق</span>
+                <span class="channel-desc">أجمل ما قيل في الحب، رسائل غرامية وصور رومانسية لأصحاب الذوق الرفيع. ❤️🌹</span>
+                <div class="join-btn">إضغط للانضمام 🎀</div>
+            </a>
+
+            <a href="https://whatsapp.com/channel/0029VaM22Q1GZNCs342ZUL3q" class="channel-card">
+                <img src="111.png" alt="كبرياء وغرور" class="channel-img">
+                <span class="channel-name">كبرياء رجل وغرور أنثى</span>
+                <span class="channel-desc">اقتباسات قوية وخواطر تعبر عن الشموخ والثقة بالنفس لكل شخصية قيادية. 🦅💎</span>
+                <div class="join-btn">إضغط للانضمام 🔥</div>
+            </a>
+
+            <a href="https://whatsapp.com/channel/0029VaetYGr2P59nEFQQDN2y" class="channel-card">
+                <img src="222.jpg" alt="نكت وملصقات" class="channel-img">
+                <span class="channel-name">نكت وملصقات منوعة</span>
+                <span class="channel-desc">مزيج رائع بين النكت الجديدة وأجمل ملصقات الحب والضحك في مكان واحد. 🎧🎈</span>
+                <div class="join-btn">إضغط للانضمام ⚡</div>
+            </a>
+
+        </div>
 
         <div class="footer-text">
             جميع الحقوق محفوظة للجوكر © 2026
@@ -178,16 +210,9 @@
 
     <div class="contact-section">
         <a href="https://wa.me/967781363029" class="floating-contact-btn">
-            <span>💬</span>
-            تواصل مباشر مع الجوكر
+            💬 تواصل مباشر مع الجوكر
         </a>
     </div>
 
 </body>
 </html>
-
-المميزات الجديدة:
- * زر تواصل ثابت (Sticky): يظل الزر ظاهراً في أسفل الشاشة حتى أثناء التمرير، مما يسهل على المستخدم الوصول إليك في أي وقت.
- * تنسيق جذاب: الزر يأتي بلون واتساب الرسمي الأخضر مع إطار أبيض وخط عريض ليكون واضحاً جداً.
- * ترتيب القنوات: تم تثبيت "ملصقات الجوكر" كأول قناة ثم "النكت والصور" كما طلبت.
- * توفير مساحة: تم إضافة مساحة (Margin) في أسفل القائمة لضمان عدم تغطية زر التواصل على محتوى آخر قناة.
