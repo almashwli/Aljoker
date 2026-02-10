@@ -1,16 +1,18 @@
+تم تحديث الكود بإضافة زر تواصل احترافي ومميز في أسفل الصفحة، يظهر بشكل ثابت وجذاب ليتمكن المستخدمون من مراسلتك على الواتساب بضغطة واحدة.
+إليك الكود المحدث:
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قنوات الجوكر الرسمية 2026</title>
+    <title>مملكة الجوكر 2026</title>
     <style>
         :root {
-            --bg-dark: #0f0f1a;
+            --bg-dark: #0a0a12;
             --accent-green: #25d366;
-            --accent-purple: #8e44ad;
+            --accent-purple: #a29bfe;
             --text-main: #ffffff;
-            --card-glass: rgba(255, 255, 255, 0.08);
+            --card-glass: rgba(255, 255, 255, 0.05);
         }
 
         body {
@@ -31,84 +33,115 @@
 
         header {
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 0;
         }
 
         .logo {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0;
-            background: linear-gradient(to right, #25d366, #8e44ad);
+            background: linear-gradient(45deg, #25d366, #a29bfe);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: bold;
+            font-weight: 900;
         }
 
         .channel-list {
             display: grid;
-            gap: 30px; /* مسافة بين القنوات */
-            margin-top: 20px;
+            gap: 35px;
+            margin-bottom: 100px; /* مسافة للزر الثابت */
         }
 
         .channel-card {
             background: var(--card-glass);
             border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 25px;
-            padding: 20px;
-            text-align: center; /* توسيط المحتوى */
+            border-radius: 30px;
+            padding: 25px 15px;
+            text-align: center;
             text-decoration: none;
             color: white;
-            transition: 0.3s ease;
+            transition: 0.4s ease;
             display: block;
         }
 
         .channel-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-10px);
             border-color: var(--accent-green);
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        /* تعديل الصورة لتكون كبيرة وفي المنتصف */
         .channel-img {
-            width: 120px; 
-            height: 120px;
-            border-radius: 20px;
+            width: 160px; 
+            height: 160px;
+            border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--accent-green);
-            margin-bottom: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            border: 4px solid var(--accent-green);
+            margin-bottom: 20px;
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.3);
         }
 
         .channel-name {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin: 10px 0;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            display: block;
+            color: var(--accent-green);
+        }
+
+        .channel-desc {
+            font-size: 0.95rem;
+            color: #bdc3c7;
+            margin-bottom: 20px;
             display: block;
         }
 
-        /* زر اضغط للانضمام أسفل الصورة */
         .join-btn {
             display: inline-block;
-            background: var(--accent-green);
-            color: #000;
-            padding: 8px 25px;
+            background: linear-gradient(90deg, #25d366, #128c7e);
+            color: #fff;
+            padding: 12px 35px;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 0.9rem;
-            margin-top: 10px;
+        }
+
+        /* تصميم زر التواصل الجديد في الأسفل */
+        .contact-section {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            z-index: 1000;
+        }
+
+        .floating-contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25d366;
+            color: #000;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             transition: 0.3s;
+            border: 2px solid white;
         }
 
-        .channel-card:hover .join-btn {
+        .floating-contact-btn:hover {
+            transform: scale(1.05);
             background: #fff;
-            transform: scale(1.1);
+            color: #25d366;
         }
 
-        .footer {
-            margin-top: 50px;
+        .footer-text {
             text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            opacity: 0.7;
+            margin-bottom: 120px;
+            opacity: 0.5;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -117,52 +150,44 @@
     <div class="container">
         <header>
             <h1 class="logo">الجوكر - Joker</h1>
+            <p style="color: #888;">عالمك الخاص على واتساب</p>
         </header>
 
         <div class="channel-list">
             
+            <a href="https://whatsapp.com/channel/0029VaetYGr2P59nEFQQDN2y" class="channel-card">
+                <img src="222.jpg" alt="ملصقات مضحكة" class="channel-img">
+                <span class="channel-name">ملصقات الجوكر المضحكة</span>
+                <span class="channel-desc">أجمل الاستيكرات الحصرية والترند التي تجعل محادثاتك أكثر متعة! 🎭✨</span>
+                <div class="join-btn">إضغط للانضمام الآن ✅</div>
+            </a>
+
             <a href="https://whatsapp.com/channel/0029VaFDOVyGE56kJdojZ21y" class="channel-card">
                 <img src="555.jpg" alt="نكت وصور" class="channel-img">
-                <span class="channel-name">ملصقات مضحكة</span>
-                <div class="join-btn">اضغط للانضمام ⚡</div>
+                <span class="channel-name">نكت وصور مضحكة</span>
+                <span class="channel-desc">أقوى النكت اليومية والقفشات المصورة لتضحك من قلبك. 😂🔥</span>
+                <div class="join-btn">إضغط للانضمام الآن ✅</div>
             </a>
 
-            <a href="https://whatsapp.com/channel/0029VaetYGr2P59nEFQQDN2y" class="channel-card">
-                <img src="222.jpg" alt="نكت وملصقات" class="channel-img">
-                <span class="channel-name">نكت وملصقات مضحكة</span>
-                <div class="join-btn">اضغط للانضمام 🎡</div>
-            </a>
+            </div>
 
-            <a href="https://whatsapp.com/channel/0029Vah9yu64SpkPw5bheK2w" class="channel-card">
-                <img src="333.jpg" alt="عالم الحزن" class="channel-img">
-                <span class="channel-name">عالم الحزن</span>
-                <div class="join-btn">اضغط للانضمام 🖤</div>
-            </a>
-
-            <a href="https://whatsapp.com/channel/0029Vag9IXyFnSz36S2Q2L2r" class="channel-card">
-                <img src="444.jpg" alt="عالم الحب" class="channel-img">
-                <span class="channel-name">عالم الحب والعشق</span>
-                <div class="join-btn">اضغط للانضمام 🎀</div>
-            </a>
-
-            <a href="https://whatsapp.com/channel/0029VaM22Q1GZNCs342ZUL3q" class="channel-card">
-                <img src="111.png" alt="كبرياء وغرور" class="channel-img">
-                <span class="channel-name">كبرياء رجل وغرور أنثى</span>
-                <div class="join-btn">اضغط للانضمام 🔥</div>
-            </a>
-
-            <a href="https://whatsapp.com/channel/0029VajEuafBKfi6URrMh93y" class="channel-card">
-                <img src="666.jpg" alt="ملصقات منوعة" class="channel-img">
-                <span class="channel-name">ملصقات منوعة - Love</span>
-                <div class="join-btn">اضغط للانضمام 🎧</div>
-            </a>
-
+        <div class="footer-text">
+            جميع الحقوق محفوظة للجوكر © 2026
         </div>
+    </div>
 
-        <div class="footer">
-            <p>جميع الحقوق محفوظة للجوكر © 2026</p>
-        </div>
+    <div class="contact-section">
+        <a href="https://wa.me/967781363029" class="floating-contact-btn">
+            <span>💬</span>
+            تواصل مباشر مع الجوكر
+        </a>
     </div>
 
 </body>
 </html>
+
+المميزات الجديدة:
+ * زر تواصل ثابت (Sticky): يظل الزر ظاهراً في أسفل الشاشة حتى أثناء التمرير، مما يسهل على المستخدم الوصول إليك في أي وقت.
+ * تنسيق جذاب: الزر يأتي بلون واتساب الرسمي الأخضر مع إطار أبيض وخط عريض ليكون واضحاً جداً.
+ * ترتيب القنوات: تم تثبيت "ملصقات الجوكر" كأول قناة ثم "النكت والصور" كما طلبت.
+ * توفير مساحة: تم إضافة مساحة (Margin) في أسفل القائمة لضمان عدم تغطية زر التواصل على محتوى آخر قناة.
